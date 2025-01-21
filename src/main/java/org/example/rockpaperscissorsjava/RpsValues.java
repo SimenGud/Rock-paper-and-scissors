@@ -1,17 +1,31 @@
 package org.example.rockpaperscissorsjava;
 
-public class RpsValues
+import java.util.Random;
 
-{
+public class RpsValues {
+
   String Rock = "Rock";
   String Paper = "Paper";
   String Scissors = "Scissors";
+
+  static Random random = new Random();
 
   public RpsValues()
   {
     setRock("Rock");
     setPaper("Paper");
     setScissors("Scissors");
+  }
+
+  public static String generateComputerChoice() {
+    int randomNum = random.nextInt(3);
+    if (randomNum == 0) {
+      return "Rock";
+    } else if (randomNum == 1) {
+      return "Paper";
+    } else {
+      return "Scissors";
+    }
   }
 
   public void setRock(String Rock)
