@@ -1,23 +1,25 @@
 package org.example.rockpaperscissorsjava;
 
-import java.util.Random;
 import java.util.Scanner;
 
-import static org.example.rockpaperscissorsjava.RpsValues.generateComputerChoice;
+import org.example.rockpaperscissorsjava.RpsValues;
 
 public class RpsApp {
   Scanner scanner = new Scanner(System.in);
-  Random random = new Random();
+  RpsValues RpsValues = new RpsValues();
+  String computerChoice;
 
+  String victory = "You win!";
+  String defeat = "Computer wins!";
+  String tie = "It's a tie!";
 
   public void run() {
     System.out.println("Welcome to Rock, Paper, Scissors!");
     System.out.println("Please enter your choice: Rock, Paper, or Scissors");
     String userChoice = scanner.nextLine();
-    String computerChoice = generateComputerChoice();
-    if (generateComputerChoice() == "Rock") {
+    if (RpsValues.generateComputerChoice() == "Rock") {
       computerChoice = "Rock";
-    } else if (generateComputerChoice() == "Paper") {
+    } else if (RpsValues.generateComputerChoice() == "Paper") {
       computerChoice = "Paper";
     } else {
       computerChoice = "Scissors";
@@ -29,15 +31,15 @@ public class RpsApp {
 
   private String determineWinner(String userChoice, String computerChoice) {
     if (userChoice.equals(computerChoice)) {
-      return "It's a tie!";
+      return tie;
     } else if (userChoice.equals("Rock") && computerChoice.equals("Scissors")) {
-      return "You win!";
+      return victory;
     } else if (userChoice.equals("Paper") && computerChoice.equals("Rock")) {
-      return "You win!";
+      return victory;
     } else if (userChoice.equals("Scissors") && computerChoice.equals("Paper")) {
-      return "You win!";
+      return victory;
     } else {
-      return "Computer wins!";
+      return defeat;
     }
   }
 }

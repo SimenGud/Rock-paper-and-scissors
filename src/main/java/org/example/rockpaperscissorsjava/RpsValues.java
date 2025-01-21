@@ -10,24 +10,18 @@ public class RpsValues {
 
   static Random random = new Random();
 
-  public RpsValues()
-  {
-    setRock("Rock");
-    setPaper("Paper");
-    setScissors("Scissors");
-  }
-
-  public static String generateComputerChoice() {
+  public String generateComputerChoice() {
     int randomNum = random.nextInt(3);
     if (randomNum == 0) {
-      return "Rock";
+      return Rock;
     } else if (randomNum == 1) {
-      return "Paper";
+      return Paper;
     } else {
-      return "Scissors";
+      return Scissors;
     }
   }
 
+  /*
   public void setRock(String Rock)
   {
     if (Rock == null || Rock.isEmpty())
@@ -68,6 +62,6 @@ public class RpsValues {
   public String getScissors()
   {
     return Scissors;
-  }
+  }*/
 
 }
