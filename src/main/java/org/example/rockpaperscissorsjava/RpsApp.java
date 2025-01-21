@@ -2,8 +2,6 @@ package org.example.rockpaperscissorsjava;
 
 import java.util.Scanner;
 
-import org.example.rockpaperscissorsjava.RpsValues;
-
 public class RpsApp {
   Scanner scanner = new Scanner(System.in);
   RpsValues RpsValues = new RpsValues();
@@ -17,9 +15,9 @@ public class RpsApp {
     System.out.println("Welcome to Rock, Paper, Scissors!");
     System.out.println("Please enter your choice: Rock, Paper, or Scissors");
     String userChoice = scanner.nextLine();
-    if (RpsValues.generateComputerChoice() == "Rock") {
+    if (RpsValues.generateComputerChoice().equals("Rock")) {
       computerChoice = "Rock";
-    } else if (RpsValues.generateComputerChoice() == "Paper") {
+    } else if (RpsValues.generateComputerChoice().equals("Paper")) {
       computerChoice = "Paper";
     } else {
       computerChoice = "Scissors";
