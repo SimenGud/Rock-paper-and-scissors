@@ -1,4 +1,9 @@
 package org.example.rockpaperscissorsjava;
 
-public class rpsApp {
+public class RpsApp
+
+{
+
+
+
 }

@@ -1,13 +1,13 @@
 package org.example.rockpaperscissorsjava;
 
-public class rpsValues
+public class RpsValues
 
 {
   String Rock = "Rock";
   String Paper = "Paper";
   String Scissors = "Scissors";
 
-  public rpsValues()
+  public RpsValues()
   {
     setRock("Rock");
     setPaper("Paper");
