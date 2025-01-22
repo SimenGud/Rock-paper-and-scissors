@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rockpaperscissorsjava.HelloController">
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rockpaperscissorsjava.RpsController">
     <Label text="Welcome to Rock, Paper, Scissors!" />
     <Label text="Please select your choice:" />
     <Button text="Rock" onAction="#handleRock" />

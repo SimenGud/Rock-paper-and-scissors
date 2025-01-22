@@ -75,7 +75,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                org.example.rockpaperscissorsjava/org.example.rockpaperscissorsjava.HelloApplication
+                                org.example.rockpaperscissorsjava/org.example.rockpaperscissorsjava.RpsApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
