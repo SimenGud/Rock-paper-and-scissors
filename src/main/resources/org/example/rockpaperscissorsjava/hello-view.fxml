@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
+
 <VBox alignment="CENTER_LEFT" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.example.rockpaperscissorsjava.HelloController">
     <padding>
@@ -13,4 +14,10 @@
 
     <Label fx:id="welcomeText"/>
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
+
+    <Button text="Rock" onAction="#onHelloButtonClick"/>
+    <Button text="Paper" onAction="#onHelloButtonClick"/>
+    <Button text="Scissors" onAction="#onHelloButtonClick"/>
 </VBox>
+
+
