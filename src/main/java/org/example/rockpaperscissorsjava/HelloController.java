@@ -5,10 +5,28 @@ import javafx.scene.control.Label;
 
 public class HelloController {
   @FXML
-  private Label welcomeText;
+  private Label resultLabel;
+
+  private RpsMachine rpsMachine = new RpsMachine();
 
   @FXML
-  protected void onHelloButtonClick() {
-    welcomeText.setText("Welcome to JavaFX Application!");
+  protected void handleRock() {
+    playGame("Rock");
+  }
+
+  @FXML
+  protected void handlePaper() {
+    playGame("Paper");
+  }
+
+  @FXML
+  protected void handleScissors() {
+    playGame("Scissors");
+  }
+
+  private void playGame(String userChoice) {
+    String computerChoice = rpsMachine.generateComputerChoice();
+    String result = rpsMachine.determineWinner(userChoice, computerChoice);
+    resultLabel.setText("Computer choice: " + computerChoice + "\n" + result);
   }
 }
