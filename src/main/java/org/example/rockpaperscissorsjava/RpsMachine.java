@@ -2,11 +2,17 @@ package org.example.rockpaperscissorsjava;
 
 import java.util.Random;
 
-public class RpsValues {
+public class RpsMachine {
 
   String Rock = "Rock";
   String Paper = "Paper";
   String Scissors = "Scissors";
+
+  String victory = "You win!";
+  String defeat = "Computer wins!";
+  String tie = "It's a tie!";
+
+  String computerChoice;
 
   static Random random = new Random();
 
@@ -19,6 +25,30 @@ public class RpsValues {
     } else {
       return Scissors;
     }
+  }
+
+  public String determineWinner(String userChoice, String computerChoice) {
+    if (userChoice.equals(computerChoice)) {
+      return tie;
+    } else if (
+        userChoice.equals("Rock") && computerChoice.equals("Scissors") ||
+            (userChoice.equals("Paper") && computerChoice.equals("Rock")) ||
+            (userChoice.equals("Scissors") && computerChoice.equals("Paper"))) {
+      return victory;
+    } else {
+      return defeat;
+    }
+  }
+
+  public String computerThrow() {
+    if (generateComputerChoice().equals("Rock")) {
+      computerChoice = "Rock";
+    } else if (generateComputerChoice().equals("Paper")) {
+      computerChoice = "Paper";
+    } else {
+      computerChoice = "Scissors";
+    }
+    return computerChoice;
   }
 
   /*
